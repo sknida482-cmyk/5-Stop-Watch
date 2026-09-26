@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the stopwatch responsive on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Stopwatch</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main stopwatch container -->
+    <div class="stopwatch-container">
+
+        <!-- Heading -->
+        <p class="heading">DIGITAL STOPWATCH</p>
+
+        <!-- Stopwatch display -->
+        <div class="display" id="display">
+            00:00:00.00
+        </div>
+
+        <!-- Status text -->
+        <p class="status" id="status">READY</p>
+
+        <!-- Control buttons -->
+        <div class="buttons">
+
+            <button id="startBtn" class="start-btn">
+                Start
+            </button>
+
+            <button id="pauseBtn" class="pause-btn">
+                Pause
+            </button>
+
+            <button id="lapBtn" class="lap-btn">
+                Lap
+            </button>
+
+            <button id="resetBtn" class="reset-btn">
+                Reset
+            </button>
+
+        </div>
+
+        <!-- Lap times will appear here -->
+        <div class="laps-container">
+
+            <h2>Lap Times</h2>
+
+            <ul id="lapList"></ul>
+
+        </div>
+
+    </div>
+
+    <!-- Connect JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

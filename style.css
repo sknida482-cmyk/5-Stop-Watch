@@ -1,0 +1,347 @@
+/* ========================================
+   BASIC RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family: "Poppins", sans-serif;
+
+    /* Dark modern background */
+    background:
+        radial-gradient(circle at top left, #302b63, transparent 40%),
+        radial-gradient(circle at bottom right, #0f4c5c, transparent 40%),
+        #080b16;
+
+    color: white;
+}
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.stopwatch-container {
+    width: min(90vw, 650px);
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    /* Glassmorphism effect */
+    background: rgba(255, 255, 255, 0.07);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        inset 0 0 25px rgba(255, 255, 255, 0.03);
+}
+
+
+/* ========================================
+   HEADING
+======================================== */
+
+.heading {
+    font-size: 14px;
+
+    letter-spacing: 5px;
+
+    color: #8ee7ff;
+
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   STOPWATCH DISPLAY
+======================================== */
+
+.display {
+    font-family: "poppins", sans-serif;
+
+    font-size: clamp(38px, 9vw, 75px);
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+
+    color: rgb(215, 193, 215);
+
+    text-shadow:
+    0 0 8px #8ee7ff,
+    0 0 40px rgba(142, 231, 255, 0.4);
+
+       
+}
+
+
+/* ========================================
+   STATUS
+======================================== */
+
+.status {
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #75ffb2;
+}
+
+
+/* ========================================
+   BUTTON CONTAINER
+======================================== */
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+
+/* ========================================
+   ALL BUTTONS
+======================================== */
+
+.buttons button {
+    min-width: 100px;
+
+    min-height: 44px;
+
+    padding: 10px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 10px;
+
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+/* ========================================
+   START BUTTON
+======================================== */
+
+.start-btn {
+    background: #176b4a;
+}
+
+
+/* ========================================
+   PAUSE BUTTON
+======================================== */
+
+.pause-btn {
+    background: #795b18;
+}
+
+
+/* ========================================
+   LAP BUTTON
+======================================== */
+
+.lap-btn {
+    background: #315a7d;
+}
+
+
+/* ========================================
+   RESET BUTTON
+======================================== */
+
+.reset-btn {
+    background: #74333d;
+}
+
+
+/* ========================================
+   BUTTON HOVER
+======================================== */
+
+.buttons button:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.2);
+}
+
+
+/* ========================================
+   BUTTON ACTIVE
+======================================== */
+
+.buttons button:active {
+    transform: scale(0.96);
+}
+
+
+/* ========================================
+   LAP SECTION
+======================================== */
+
+.laps-container {
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.laps-container h2 {
+    font-size: 17px;
+
+    font-weight: 500;
+
+    color: #d5d9e8;
+
+    margin-bottom: 15px;
+}
+
+
+/* ========================================
+   LAP LIST
+======================================== */
+
+#lapList {
+    list-style: none;
+
+    max-height: 180px;
+
+    overflow-y: auto;
+}
+
+
+/* ========================================
+   EACH LAP
+======================================== */
+
+#lapList li {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 10px 15px;
+
+    margin-bottom: 8px;
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    color: #dce3ef;
+
+    font-family: "poppins", sans-serif;
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 600px) {
+
+    .stopwatch-container {
+        padding: 30px 18px;
+    }
+
+    .heading {
+        font-size: 12px;
+
+        letter-spacing: 3px;
+    }
+
+    .display {
+        letter-spacing: 1px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .buttons button {
+        min-width: 90px;
+    }
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 380px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .stopwatch-container {
+        padding: 25px 12px;
+
+        border-radius: 20px;
+    }
+
+    .display {
+        font-size: 31px;
+    }
+
+    .buttons button {
+        min-width: 80px;
+
+        padding: 9px 12px;
+
+        font-size: 13px;
+    }
+
+    #lapList li {
+        font-size: 11px;
+
+        padding: 9px;
+    }
+}
